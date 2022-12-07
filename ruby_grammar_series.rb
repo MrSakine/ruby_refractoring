@@ -42,20 +42,12 @@ while true
           puts "Please enter a comment"
           comment = gets
           post = format_input(point, comment)
-        #   File.open("data.txt", "a") do |file|
-        #     file.puts(post)
-        #   end
           save_post_to_file(post, "data.txt", "a")
           break
         end
       end
     when 2
       puts "results so far"
-    #   File.open("data.txt", "r") do |file|
-    #     file.each_line do |line|
-    #       puts line
-    #     end
-    #   end
       read_post_from_file("data.txt", "r")
     when 3
       puts "Good bye!"
